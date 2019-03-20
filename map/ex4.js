@@ -52,8 +52,21 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
-}
 
+  let calculate = radiuses.map(function(radio) {
+
+    let circ = (2 * Math.PI * radio).toFixed(3);
+    let surf = (Math.PI * radio * radio).toFixed(3);
+
+    return {
+      radius : radio,
+      circumference : circ,
+      surface : surf, 
+    };
+  });
+
+  return calculate;  
+}
 
 
 // Ne pas modifier l'export

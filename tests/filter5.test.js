@@ -1,6 +1,6 @@
 const searchWordFilter = require('../filter/ex5.js');
 
-xdescribe('filter - exercice 5', () => {
+describe('filter - exercice 5', () => {
 
   test('searchWordFilter', () => {
     expect(searchWordFilter([
@@ -18,6 +18,5 @@ xdescribe('filter - exercice 5', () => {
       'Star Wars: Episode III - Revenge of the Sith'
     ]);
   });
-
 });
 

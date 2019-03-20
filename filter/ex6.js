@@ -26,7 +26,49 @@ Sortie attendue:
 
 */
 
+// var array = [1, 2, 3, 4, 5];
+
+// var even = function(element) {
+//   element.
+//   return element % 2 === 0;
+// };
+
+
+// function isInArray(value, array) {
+//   return array.indexOf(value) > -1;
+// }
+
+
+// console.log(array.some(even));
+// expected output: true
+
+
 function filterOffensiveComments(comments, bannedWords) {
+
+  let arr = [];
+
+  let clear = comments.filter(function(comment) {
+
+    let newComment = comment.toLowerCase();
+
+    let present = bannedWords.filter(function(word) {
+      if (newComment.includes(word)) {
+        arr.push(newComment);
+        return true;
+      } else {
+        return false;
+      }
+    }) 
+    
+    if (arr.includes(newComment)) {
+      return false;
+    } else {
+      return true;
+    }
+  })
+ 
+  return clear;
+
 }
 
 // Ne pas modifier l'export

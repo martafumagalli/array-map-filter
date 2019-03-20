@@ -24,7 +24,17 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+
+  let isStark = names.filter(function(name) {
+
+      if(name.slice(name.length-5, name.length) === 'Stark') {
+        return true;
+      }
+    });
+    
+    return isStark;
 }
+
 
 // Ne pas modifier l'export
 module.exports = keepStarks;

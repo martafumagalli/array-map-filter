@@ -35,11 +35,22 @@ Exemple d'entrée:
     'Star Wars: Episode III - Revenge of the Sith'
   ]
 
-
  */
 
 function searchWordFilter(items, search) {
-}
+
+  let elements = items.filter(function(item) {    
+
+    let newItem = item.toLowerCase();
+
+    if (newItem.includes(search)){
+      return true;
+    } else {
+      return false;
+    }
+  })
+  return elements;
+};
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

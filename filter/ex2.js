@@ -15,8 +15,15 @@ Exemple d'entrée:
 
  */
 
+
+
 function getMultiplesOf(numbers, n) {
+
+    const multiplesDeN = numbers.filter(num => (num%n === 0));    
+    return multiplesDeN;
 }
+
+
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;
